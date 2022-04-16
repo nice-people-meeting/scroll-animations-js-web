@@ -25,4 +25,7 @@ module.exports = {
     },
   },
   // extends: ['prettier'],
+  rules: {
+    'prettier/prettier': ['off', { singleQuote: true }],
+  },
 };
