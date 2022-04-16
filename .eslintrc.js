@@ -12,6 +12,7 @@ module.exports = {
         'react/react-in-jsx-scope': 'off',
         'react/jsx-curly-brace-presence': 'error',
         '@typescript-eslint/explicit-module-boundary-types': 'off',
+        'react/prop-types': 'off',
       },
       parserOptions: {
         ecmaVersion: 2018,

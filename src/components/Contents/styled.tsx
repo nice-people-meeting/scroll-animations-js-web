@@ -3,11 +3,11 @@ import styled from 'styled-components';
 // Contents
 export const ContentsWrapper = styled.div`
   position: relative;
-  margin-top: 250px;
   display: flex;
   justify-content: space-evenly;
-  width: 100vw;
-  height: 33vh;
+  width: 100%;
+  height: 48vh;
+  margin-bottom: 50px;
 `;
 export const SubTitle = styled.p`
   font-size: 26px;
