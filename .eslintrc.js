@@ -24,4 +24,5 @@ module.exports = {
       version: 'detect',
     },
   },
+  // extends: ['prettier'],
 };
