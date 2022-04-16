@@ -19,7 +19,7 @@ const Contents = ({ name }: ContentsProps) => {
       </Content>
       <Content>
         <SubTitle>Preview</SubTitle>
-        <AnimationBox code={CODE} />
+        <AnimationBox name={name} />
       </Content>
     </ContentsWrapper>
   );

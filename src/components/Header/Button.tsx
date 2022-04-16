@@ -1,9 +1,10 @@
 import { ButtonContainer } from './styled';
 
-interface prop {
+interface Prop {
   name: string;
+  src: string;
+  curAnimationHandler: (param: string) => void;
 }
-export default function Button({ name }: prop) {
-  console.log(name);
-  return <ButtonContainer>{name}</ButtonContainer>;
+export default function Button({ name, src, curAnimationHandler }: Prop) {
+  return <ButtonContainer onClick={() => curAnimationHandler(src)}>{name}</ButtonContainer>;
 }

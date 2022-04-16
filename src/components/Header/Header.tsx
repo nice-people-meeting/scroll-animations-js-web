@@ -2,7 +2,11 @@ import { AnimationList } from './AnimationList';
 import Button from './Button';
 import { ButtonWrapper, HeaderWrapper, LogoContainer, ToNpmContainer, ToNpmDiv } from './styled';
 
-export default function Header() {
+interface Prop {
+  curAnimationHandler: (param: string) => void;
+}
+
+export default function Header({ curAnimationHandler }: Prop) {
   return (
     <HeaderWrapper>
       <ToNpmContainer>
@@ -13,15 +17,11 @@ export default function Header() {
         </ToNpmDiv>
       </ToNpmContainer>
       <LogoContainer>
-        <img
-          src="https://i0.wp.com/www.buppagistar.com/wp-content/uploads/2017/08/wowjs_screenshot.png?fit=806%2C364&ssl=1"
-          alt="logo"
-          width="700px"
-        />
+        <img src="images/large.png" alt="logo" width="700px" />
       </LogoContainer>
       <ButtonWrapper>
         {AnimationList.map(el => {
-          return <Button key={el.id} name={el.name} />;
+          return <Button key={el.id} name={el.name} src={el.src} curAnimationHandler={curAnimationHandler} />;
         })}
       </ButtonWrapper>
     </HeaderWrapper>

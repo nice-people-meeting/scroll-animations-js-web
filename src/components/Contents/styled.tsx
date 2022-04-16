@@ -53,10 +53,29 @@ export const AnimationBoxWrapper = styled.div`
   overflow: hidden;
   overflow-y: scroll;
 `;
+
+export const TestAniamtionDiv = styled.div`
+  width: 200px;
+  height: 200px;
+  margin-bottom: 100px;
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ececec;
+`;
 export const AnimationBackground = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 250%;
+  height: 300%;
+  div {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 100px;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ececec;
+  }
 `;
