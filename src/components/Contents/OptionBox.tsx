@@ -1,4 +1,4 @@
-import { RangeBar } from './styled';
+import { RangeBar, OptionBoxWrapper } from './styled';
 
 interface OptionBoxProps {
   description: React.ReactNode | string;
@@ -13,7 +13,7 @@ interface OptionBoxProps {
 
 const OptionBox = ({ description, name, min, max, step, disabled = false, value, onChange }: OptionBoxProps) => {
   return (
-    <div>
+    <OptionBoxWrapper>
       <div>{description}</div>
       <RangeBar>
         <p>{min}</p>
@@ -30,7 +30,7 @@ const OptionBox = ({ description, name, min, max, step, disabled = false, value,
         />
         <p>{max}</p>
       </RangeBar>
-    </div>
+    </OptionBoxWrapper>
   );
 };
 
