@@ -7,14 +7,15 @@ import Footer from './components/Footer/Footer';
 import './App.css';
 
 function App() {
-  const [curAnimation, setCurAnimation] = useState('sa-animation sa-fade-down');
-  console.log(init);
-  useEffect(() => console.log(curAnimation), [curAnimation]);
+  const [curAnimation, setCurAnimation] = useState(() => {
+    return window.sessionStorage.getItem('curAnimation');
+  });
   useEffect(() => init(), []);
 
   const curAnimationHandler = param => {
     window.location.reload();
     setCurAnimation(param);
+    window.sessionStorage.setItem('curAnimation', param);
   };
   return (
     <div>
