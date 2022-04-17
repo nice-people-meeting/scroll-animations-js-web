@@ -20,7 +20,7 @@
 - Supports Vanilla JavaScript, React, and Vue
 - Support TypeScript
 - Supports all versions of React and Vue
-- About 368KB min+gzip
+- About 378KB min+gzip
 - Focus on usability and performance without _over-animating_ stuff
 
 ## Documentation
@@ -41,16 +41,22 @@ https://www.npmjs.com/package/scroll-animations-js
 npm install scroll-animations.js
 ```
 
+or
+
+```bash
+yarn add scroll-animations.js
+```
+
 #### Link styles
 
 ```js
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scroll-animations-js@0.0.2/dist/css/index.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scroll-animations-js@1.0.8/dist/css/index.min.css">
 ```
 
 #### Add scripts
 
 ```js
-<script src="https://cdn.jsdelivr.net/npm/scroll-animations-js@0.0.2/dist/scroll.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/scroll-animations-js@1.0.8/dist/scroll.min.js"></script>
 ```
 
 ## 🤔 How to use it?
@@ -71,8 +77,8 @@ function App() {
 - HTML
 
 ```js
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scroll-animations-js@0.0.2/dist/css/index.min.css">
-<script src="https://cdn.jsdelivr.net/npm/scroll-animations-js@0.0.2/dist/scroll.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scroll-animations-js@1.0.8/dist/css/index.min.css">
+<script src="https://cdn.jsdelivr.net/npm/scroll-animations-js@1.0.8/dist/scroll.min.js"></script>
 
 <div class="sa-animation sa-fade-up-left" sa-duration="3000"></div>
 
@@ -107,9 +113,9 @@ Vue.use(Animation, {
 
 3. Just add scroll-animations-js in your 'vue' file
 
-```htmlmixed=
+```js
 <template>
-    <div class="sa-animation sa-fade-up-left" sa-duration="3000"></div>
+  <div class="sa-animation sa-fade-up-left" sa-duration="3000"></div>
 </template>
 ```
 
