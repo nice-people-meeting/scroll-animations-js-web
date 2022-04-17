@@ -50,13 +50,13 @@ yarn add scroll-animations.js
 #### Link styles
 
 ```js
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scroll-animations-js@1.0.8/dist/css/index.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scroll-animations-js@1.0.9/dist/css/index.min.css">
 ```
 
 #### Add scripts
 
 ```js
-<script src="https://cdn.jsdelivr.net/npm/scroll-animations-js@1.0.8/dist/scroll.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/scroll-animations-js@1.0.9/dist/scroll.min.js"></script>
 ```
 
 ## 🤔 How to use it?
@@ -77,8 +77,8 @@ function App() {
 - HTML
 
 ```js
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scroll-animations-js@1.0.8/dist/css/index.min.css">
-<script src="https://cdn.jsdelivr.net/npm/scroll-animations-js@1.0.8/dist/scroll.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scroll-animations-js@1.0.9/dist/css/index.min.css">
+<script src="https://cdn.jsdelivr.net/npm/scroll-animations-js@1.0.9/dist/scroll.min.js"></script>
 
 <div class="sa-animation sa-fade-up-left" sa-duration="3000"></div>
 
@@ -168,6 +168,7 @@ If you use **fade animation**, you can customizing fade distance
 | sa-fade-distance | Far distance from element (px) | 100 | 200 | 100~1000(px) |
 
 If you use **scale animation**, you can customizing scaling
+You **can't** use `sa-scale-x` or `sa-scale-y` with `sa-scale`
 | Attribute | Description | Step | Default value | Range |
 | --------- | ----------- | -------- | --- | --- |
 | sa-scale-x | Scale to x-axis | 0.1 | 1.1 | 1.1 ~ 3.0 |
