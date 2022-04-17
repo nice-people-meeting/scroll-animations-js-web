@@ -9,10 +9,9 @@ export const HeaderWrapper = styled.div`
 export const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
-  h1 {
-    font-size: 2.5rem;
-    color: white;
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
+  g {
+    fill: white;
   }
 `;
 
@@ -36,10 +35,12 @@ export const ToNpmDiv = styled.div`
   }
 `;
 
-export const GihubLogo = styled.div`
+export const GithubLogo = styled.div`
+  display: flex;
+
   margin-top: 1rem;
   margin-right: 1rem;
-  flex: 0.02;
+  justify-self: end;
   a {
     text-decoration: none;
   }
@@ -58,9 +59,8 @@ export const ButtonWrapper = styled.div`
 export const ButtonContainer = styled.div`
   align-items: center;
   background: #fff;
-  border: 0 solid #e2e8f0;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  box-sizing: border-box;
+  box-shadow: inset 0 0 0 0 #2e3846;
+
   color: #000;
   display: inline-flex;
   font-family: Inter, sans-serif;
@@ -72,15 +72,16 @@ export const ButtonContainer = styled.div`
   line-height: 24px;
   overflow-wrap: break-word;
   padding: 12px;
-  text-decoration: none;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
+  /* user-select: none;
+  -webkit-user-select: none; */
   touch-action: manipulation;
   margin: 10px;
+  transition: ease-out 0.3s;
   &:hover {
-    background: #282d3e;
+    box-shadow: inset 400px 0 0 0 #2e3846;
+    color: #fff;
   }
   @media screen and (max-width: 767px) {
     width: 90px;
