@@ -2,7 +2,7 @@ import { useState } from 'react';
 import AnimationBox from './AnimationBox';
 import CodeBox from './CodeBox';
 import OptionContainer from './OptionContainer';
-import { ContentsWrapper, SubTitle, Content } from './styled';
+import { ContentsWrapper, SubTitle, Content, CodeWrapper } from './styled';
 
 interface ContentsProps {
   name: string | null;
@@ -68,25 +68,33 @@ const Contents = ({ name }: ContentsProps) => {
     <ContentsWrapper>
       <Content>
         <SubTitle>Usage</SubTitle>
-        <CodeBox code={CODE} />
-        <OptionContainer
-          name={name}
-          delayHandler={delayHandler}
-          durationHandler={durationHandler}
-          duration={duration}
-          delay={delay}
-          fadeDistance={fadeDistance}
-          fadeDistanceHandler={fadeDistanceHandler}
-          scale={scale}
-          scaleX={scaleX}
-          scaleY={scaleY}
-          ScaleYHandler={ScaleYHandler}
-          ScaleXHandler={ScaleXHandler}
-          ScaleHandler={ScaleHandler}
-        />
+        <CodeWrapper>
+          <CodeBox code={CODE} />
+          <OptionContainer
+            name={name}
+            delayHandler={delayHandler}
+            durationHandler={durationHandler}
+            duration={duration}
+            delay={delay}
+            fadeDistance={fadeDistance}
+            fadeDistanceHandler={fadeDistanceHandler}
+            scale={scale}
+            scaleX={scaleX}
+            scaleY={scaleY}
+            ScaleYHandler={ScaleYHandler}
+            ScaleXHandler={ScaleXHandler}
+            ScaleHandler={ScaleHandler}
+          />
+        </CodeWrapper>
       </Content>
       <Content>
-        <SubTitle>Preview</SubTitle>
+        <SubTitle>
+          Preview ( Scroll It!
+          <a href="scroll">
+            <span />
+          </a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
+        </SubTitle>
         <AnimationBox name={name} delay={delay} duration={duration} fadeDistance={fadeDistance} scale={scale} />
       </Content>
     </ContentsWrapper>
