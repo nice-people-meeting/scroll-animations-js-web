@@ -1,4 +1,5 @@
 import { useRef, useEffect } from 'react';
+import init from 'scroll-animations-js';
 import { AnimationBoxWrapper, AnimationBackground } from './styled';
 
 interface AnimationBoxProps {
@@ -8,20 +9,30 @@ interface AnimationBoxProps {
 }
 
 function AnimationBox({ name, delay, duration }: AnimationBoxProps) {
-  const example = useRef<HTMLDivElement>(null);
+  const boxWrapper = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!example.current) return;
+    if (!boxWrapper.current) return;
 
-    example.current.classList.remove('sa-animated');
+    const list = Array.from(boxWrapper.current.children);
+
+    list.forEach(item => {
+      item.classList.remove('sa-animated');
+    });
+
+    console.log('init');
+
     setTimeout(() => {
-      example.current?.classList.add('sa-animated');
+      list.forEach(item => {
+        item.classList.add('sa-animated');
+      });
+      init.init();
     }, duration);
-  }, [delay, duration]);
+  }, [delay, duration, name]);
   return (
     <AnimationBoxWrapper>
-      <AnimationBackground>
-        <div ref={example} className={name || undefined} sa-delay={delay} sa-duration={duration} />
+      <AnimationBackground ref={boxWrapper}>
+        <div className={name || undefined} sa-delay={delay} sa-duration={duration} />
         <div className={name || undefined} sa-delay={delay} sa-duration={duration} />
         <div className={name || undefined} sa-delay={delay} sa-duration={duration} />
         <div className={name || undefined} sa-delay={delay} sa-duration={duration} />
