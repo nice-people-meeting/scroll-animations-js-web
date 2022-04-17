@@ -134,7 +134,7 @@ export const AnimationBoxWrapper = styled.div`
   background-color: #2f3846;
   justify-content: center;
   align-items: flex-start;
-  width: 300%;
+  width: 200%;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
 
