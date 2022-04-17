@@ -11,6 +11,12 @@ function AnimationBox({ name, delay, duration }: AnimationBoxProps) {
     <AnimationBoxWrapper>
       <AnimationBackground>
         <div className={name || undefined} sa-delay={delay} sa-duration={duration} />
+        <div className={name || undefined} sa-delay={delay} sa-duration={duration} />
+        <div className={name || undefined} sa-delay={delay} sa-duration={duration} />
+        <div className={name || undefined} sa-delay={delay} sa-duration={duration} />
+        <div className={name || undefined} sa-delay={delay} sa-duration={duration} />
+        <div className={name || undefined} sa-delay={delay} sa-duration={duration} />
+        <div className={name || undefined} sa-delay={delay} sa-duration={duration} />
       </AnimationBackground>
     </AnimationBoxWrapper>
   );

@@ -9,10 +9,10 @@ interface ContentsProps {
 }
 
 const Contents = ({ name }: ContentsProps) => {
-  const [delay, setDelay] = useState(0);
-  const [duration, setDuration] = useState(0);
+  const [delay, setDelay] = useState(300);
+  const [duration, setDuration] = useState(500);
   const CODE = `<div class="${name}" ${delay ? `sa-delay="${delay}"` : ''} ${
-    duration ? `sa-duration="${duration}"` : ''
+    duration !== 500 ? `sa-duration="${duration}"` : ''
   }></div>`;
 
   const delayHandler = (param: number) => {
@@ -27,7 +27,7 @@ const Contents = ({ name }: ContentsProps) => {
       <Content>
         <SubTitle>Usage</SubTitle>
         <CodeBox code={CODE} />
-        <OptionBox delayHandler={delayHandler} durationHandler={durationHandler} />
+        <OptionBox delayHandler={delayHandler} durationHandler={durationHandler} duration={duration} delay={delay} />
       </Content>
       <Content>
         <SubTitle>Preview</SubTitle>

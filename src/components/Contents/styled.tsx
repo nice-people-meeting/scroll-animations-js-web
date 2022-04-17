@@ -65,13 +65,14 @@ export const TestAniamtionDiv = styled.div`
 `;
 export const AnimationBackground = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 300%;
+  height: 400%;
   div {
-    width: 200px;
-    height: 200px;
+    width: 50px;
+    height: 50px;
     margin-bottom: 100px;
     border: 1px solid black;
     margin-left: auto;
