@@ -1,8 +1,7 @@
-import React from 'react';
-import { CopyBlock, dracula } from 'react-code-blocks';
+import { useState } from 'react';
 import AnimationBox from './AnimationBox';
 import CodeBox from './CodeBox';
-// import { Controller, Sidebar } from '../../components';
+import OptionBox from './OptionBox';
 import { ContentsWrapper, SubTitle, Content } from './styled';
 
 interface ContentsProps {
@@ -10,16 +9,29 @@ interface ContentsProps {
 }
 
 const Contents = ({ name }: ContentsProps) => {
-  const CODE = `<div class="${name}"></div>`;
+  const [delay, setDelay] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const CODE = `<div class="${name}" ${delay ? `sa-delay="${delay}"` : ''} ${
+    duration ? `sa-duration="${duration}"` : ''
+  }></div>`;
+
+  const delayHandler = (param: number) => {
+    setDelay(param);
+  };
+  const durationHandler = (param: number) => {
+    setDuration(param);
+  };
+
   return (
     <ContentsWrapper>
       <Content>
         <SubTitle>Usage</SubTitle>
         <CodeBox code={CODE} />
+        <OptionBox delayHandler={delayHandler} durationHandler={durationHandler} />
       </Content>
       <Content>
         <SubTitle>Preview</SubTitle>
-        <AnimationBox name={name} />
+        <AnimationBox name={name} delay={delay} duration={duration} />
       </Content>
     </ContentsWrapper>
   );

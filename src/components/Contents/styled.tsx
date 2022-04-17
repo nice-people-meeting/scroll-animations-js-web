@@ -79,3 +79,9 @@ export const AnimationBackground = styled.div`
     background-color: #ececec;
   }
 `;
+
+// OptionBox
+
+export const RangeBar = styled.div`
+  display: flex;
+`;
