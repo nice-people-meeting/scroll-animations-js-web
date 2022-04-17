@@ -93,15 +93,12 @@ const OptionContainer = ({
       ScaleYHandler({ ...scaleY, isCustom: false });
     }
   };
-  console.log(scaleX);
-  console.log(scaleY);
-  console.log(scaleX.isCustom || scaleY.isCustom);
 
   return (
     <OptionContainerWrapper>
       <OptionTitle>Options</OptionTitle>
       <OptionBox
-        description="Delay (ms) [default: 0ms]"
+        description="Delay (ms) [default: 300ms]"
         name="delay"
         min={0}
         max={5000}
