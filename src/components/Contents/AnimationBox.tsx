@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useCallback } from 'react';
 import init from 'scroll-animations-js';
 import { AnimationBoxWrapper, AnimationBackground } from './styled';
 import type { FadeDistance, Scale } from './Contents';
@@ -13,6 +13,16 @@ interface AnimationBoxProps {
 
 function AnimationBox({ name, delay, duration, fadeDistance, scale }: AnimationBoxProps) {
   const boxWrapper = useRef<HTMLDivElement>(null);
+
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    scrollToTop();
+  }, [name]);
+
+  const scrollToTop = useCallback(() => {
+    scrollRef.current?.scrollIntoView({ block: 'start' });
+  }, [name]);
 
   useEffect(() => {
     if (!boxWrapper.current) return;
@@ -85,6 +95,7 @@ function AnimationBox({ name, delay, duration, fadeDistance, scale }: AnimationB
           </>
         )}
       </AnimationBackground>
+      <div ref={scrollRef} />
     </AnimationBoxWrapper>
   );
 }
