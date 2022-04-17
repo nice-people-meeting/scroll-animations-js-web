@@ -1,6 +1,8 @@
 import { AnimationList } from './AnimationList';
 import Button from './Button';
-import { ButtonWrapper, HeaderWrapper, LogoContainer, ToNpmContainer, ToNpmDiv } from './styled';
+import { ButtonWrapper, HeaderWrapper, LogoContainer, ToNpmContainer, ToNpmDiv, GihubLogo } from './styled';
+import { ReactComponent as GithubIcon } from '../../assets/github.svg';
+import { ReactComponent as Logo } from '../../assets/logo.svg';
 
 interface Prop {
   curAnimationHandler: (param: string) => void;
@@ -11,14 +13,20 @@ export default function Header({ curAnimationHandler }: Prop) {
     <HeaderWrapper>
       <ToNpmContainer>
         <ToNpmDiv>
-          <a href="https://www.npmjs.com/package/scroll-animations-js" target="_blank" rel="noreferrer">
+          <a href="https://github.com/nice-people-meeting/scroll-animation-js" target="_blank" rel="noreferrer">
             {/* &gt; Go To Npm */}
-            <img alt="" src="/images/GitHub_Logo_White.png" width={100} height={50} />
+            <Logo width={40} height={40} fill="#202020" />
           </a>
         </ToNpmDiv>
+        <GihubLogo style={{ justifySelf: 'flex-end' }}>
+          <a href="https://github.com/nice-people-meeting/scroll-animation-js" target="_blank" rel="noreferrer">
+            {/* &gt; Go To Npm */}
+            <GithubIcon width={40} height={40} fill="#fff" />
+          </a>
+        </GihubLogo>
       </ToNpmContainer>
       <LogoContainer>
-        <h1>Scroll Animation JS</h1>
+        <h1>Scroll Animations JS</h1>
       </LogoContainer>
       <ButtonWrapper>
         {AnimationList.map(el => {
