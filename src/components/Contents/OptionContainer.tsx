@@ -152,7 +152,7 @@ const OptionContainer = ({
               />
             </>
           )}
-          {!scale.isCustom && (
+          {/* {!scale.isCustom && (
             <>
               <input type="checkbox" onChange={handleScaleXCustomOption} />
               <OptionBox
@@ -177,7 +177,7 @@ const OptionContainer = ({
                 onChange={handleScaleYHandler}
               />
             </>
-          )}
+          )} */}
         </>
       )}
     </OptionContainerWrapper>
