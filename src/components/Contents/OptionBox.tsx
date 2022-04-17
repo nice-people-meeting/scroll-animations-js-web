@@ -1,45 +1,34 @@
 import { RangeBar } from './styled';
 
 interface OptionBoxProps {
-  delayHandler: (param: number) => void;
-  durationHandler: (param: number) => void;
-  duration: number;
-  delay: number;
+  description: React.ReactNode | string;
+  name: string;
+  min: number;
+  max: number;
+  step: number;
+  value: number;
+  disabled?: boolean;
+  onChange: (newValue: number) => void;
 }
 
-const OptionBox = ({ delayHandler, durationHandler, duration, delay }: OptionBoxProps) => {
+const OptionBox = ({ description, name, min, max, step, disabled = false, value, onChange }: OptionBoxProps) => {
   return (
     <div>
-      <p>Options</p>
-      <div>delay (ms) [default: 0ms]</div>
+      <div>{description}</div>
       <RangeBar>
-        <p>0</p>
+        <p>{min}</p>
         <input
+          disabled={disabled}
           type="range"
-          id="delay"
-          name="delay"
-          min="0"
-          max="3000"
-          step="100"
-          value={delay}
-          onChange={e => delayHandler(+e.target.value)}
+          id={name}
+          name={name}
+          min={min}
+          max={max}
+          step={step}
+          value={value}
+          onChange={e => onChange(+e.target.value)}
         />
-        <p>3000</p>
-      </RangeBar>
-      <div>duration (ms) [default: 500ms]</div>
-      <RangeBar>
-        <p>0</p>
-        <input
-          type="range"
-          id="duration"
-          name="duration"
-          min="0"
-          max="3000"
-          step="100"
-          value={duration}
-          onChange={e => durationHandler(+e.target.value)}
-        />
-        <p>3000</p>
+        <p>{max}</p>
       </RangeBar>
     </div>
   );

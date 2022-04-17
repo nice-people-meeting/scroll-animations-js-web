@@ -10,6 +10,7 @@
     "no-use-before-define": 0,
     "import/no-extraneous-dependencies": 0,
     "no-shadow": 0,
-    "no-console": "off"
+    "no-console": "off",
+    "react/require-default-props": "off"
   }
 }
