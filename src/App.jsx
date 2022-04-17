@@ -7,12 +7,13 @@ import Footer from './components/Footer/Footer';
 import './App.css';
 
 function App() {
-  const [curAnimation, setCurAnimation] = useState('');
+  const [curAnimation, setCurAnimation] = useState('sa-animation sa-fade-down');
   console.log(init);
   useEffect(() => console.log(curAnimation), [curAnimation]);
   useEffect(() => init(), []);
 
   const curAnimationHandler = param => {
+    window.location.reload();
     setCurAnimation(param);
   };
   return (
@@ -20,9 +21,6 @@ function App() {
       <Header curAnimationHandler={curAnimationHandler} />
       <Contents name={curAnimation} />
       <Footer />
-      <div className="test">
-        <div className="sa-animation sa-fade-up" />
-      </div>
     </div>
   );
 }
