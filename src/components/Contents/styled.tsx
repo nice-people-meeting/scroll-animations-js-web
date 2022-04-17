@@ -105,6 +105,9 @@ export const CodeBoxWrapper = styled.code`
     @media (max-width: 650px) {
       width: 425px;
     }
+    @media (max-width: 650px) {
+      width: 350px;
+    }
   }
 `;
 
@@ -134,7 +137,7 @@ export const AnimationBoxWrapper = styled.div`
   background-color: #2f3846;
   justify-content: center;
   align-items: flex-start;
-  width: 200%;
+  width: 300%;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
 
@@ -152,6 +155,10 @@ export const AnimationBoxWrapper = styled.div`
   &::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 0, 0.3);
     border-radius: 1rem;
+  }
+
+  @media (max-width: 580px) {
+    width: 100%;
   }
 `;
 

@@ -13,10 +13,12 @@ export const LogoContainer = styled.div`
   g {
     fill: white;
   }
+  @media (max-width: 400px) {
+    width: 365px;
+  }
 `;
 
 export const ToNpmContainer = styled.div`
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -74,8 +76,6 @@ export const ButtonContainer = styled.div`
   padding: 12px;
   border-radius: 0.5rem;
   cursor: pointer;
-  /* user-select: none;
-  -webkit-user-select: none; */
   touch-action: manipulation;
   margin: 10px;
   transition: ease-out 0.3s;

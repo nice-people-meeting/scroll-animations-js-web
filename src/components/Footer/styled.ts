@@ -15,18 +15,21 @@ export const FooterWrap = styled.div`
   width: 100%;
   padding: 0rem;
   color: white;
+  padding: 20px 0;
+  @media (max-width: 650px) {
+    width: 350px;
+  }
 `;
 
 export const TeamInfoBox = styled.ul`
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
-
   li {
     .npm_box {
       flex-direction: column;
     }
     .team_box {
+      margin-top: 1rem;
       flex-direction: column;
     }
     h3 {
@@ -50,10 +53,10 @@ export const TeamInfoBox = styled.ul`
       text-shadow: 0.5px 0px 0.1px, -0.5px 0px 0.1px;
     }
   }
-  li:nth-child(1) {
-    margin-top: 0.5rem;
+  /* li:nth-child(1) {
+    margin-top: 0.2rem;
     margin-bottom: 1rem;
-  }
+  } */
   @media screen and (min-width: 768px) {
     flex-direction: row;
   }
