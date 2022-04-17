@@ -1,3 +1,4 @@
+import { useRef, useEffect } from 'react';
 import { AnimationBoxWrapper, AnimationBackground } from './styled';
 
 interface AnimationBoxProps {
@@ -7,10 +8,20 @@ interface AnimationBoxProps {
 }
 
 function AnimationBox({ name, delay, duration }: AnimationBoxProps) {
+  const example = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!example.current) return;
+
+    example.current.classList.remove('sa-animated');
+    setTimeout(() => {
+      example.current?.classList.add('sa-animated');
+    }, duration);
+  }, [delay, duration]);
   return (
     <AnimationBoxWrapper>
       <AnimationBackground>
-        <div className={name || undefined} sa-delay={delay} sa-duration={duration} />
+        <div ref={example} className={name || undefined} sa-delay={delay} sa-duration={duration} />
         <div className={name || undefined} sa-delay={delay} sa-duration={duration} />
         <div className={name || undefined} sa-delay={delay} sa-duration={duration} />
         <div className={name || undefined} sa-delay={delay} sa-duration={duration} />

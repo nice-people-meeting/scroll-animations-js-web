@@ -20,13 +20,12 @@ const OptionBox = ({ delayHandler, durationHandler, duration, delay }: OptionBox
           name="delay"
           min="0"
           max="3000"
-          step="50"
+          step="100"
           value={delay}
           onChange={e => delayHandler(+e.target.value)}
         />
         <p>3000</p>
       </RangeBar>
-
       <div>duration (ms) [default: 500ms]</div>
       <RangeBar>
         <p>0</p>
@@ -36,7 +35,7 @@ const OptionBox = ({ delayHandler, durationHandler, duration, delay }: OptionBox
           name="duration"
           min="0"
           max="3000"
-          step="50"
+          step="100"
           value={duration}
           onChange={e => durationHandler(+e.target.value)}
         />
