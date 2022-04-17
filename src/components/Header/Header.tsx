@@ -12,12 +12,13 @@ export default function Header({ curAnimationHandler }: Prop) {
       <ToNpmContainer>
         <ToNpmDiv>
           <a href="https://www.npmjs.com/package/scroll-animations-js" target="_blank" rel="noreferrer">
-            &gt; Go To Npm
+            {/* &gt; Go To Npm */}
+            <img alt="" src="/images/GitHub_Logo_White.png" width={100} height={50} />
           </a>
         </ToNpmDiv>
       </ToNpmContainer>
       <LogoContainer>
-        <img src="images/large.png" alt="logo" width="300px" />
+        <h1>Scroll Animation JS</h1>
       </LogoContainer>
       <ButtonWrapper>
         {AnimationList.map(el => {

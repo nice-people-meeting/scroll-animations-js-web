@@ -4,7 +4,7 @@ export const FooterContainer = styled.footer`
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: #ffffff;
+  /* background: #202020; */
   border-top: 1px solid #f2f2f2;
 `;
 
@@ -13,6 +13,7 @@ export const FooterWrap = styled.div`
   max-width: 1200px;
   width: 100%;
   padding: 1.5rem 1rem;
+  color: white;
 `;
 
 export const TeamInfoBox = styled.ul`
