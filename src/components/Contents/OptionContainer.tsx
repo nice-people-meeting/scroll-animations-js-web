@@ -1,5 +1,6 @@
 import { FadeDistance, Scale, ScaleX, ScaleY } from './Contents';
 import OptionBox from './OptionBox';
+import { OptionContainerWrapper, OptionTitle } from './styled';
 
 interface OptionContainerProps {
   delayHandler: (param: number) => void;
@@ -97,10 +98,10 @@ const OptionContainer = ({
   console.log(scaleX.isCustom || scaleY.isCustom);
 
   return (
-    <div>
-      <p>Options</p>
+    <OptionContainerWrapper>
+      <OptionTitle>Options</OptionTitle>
       <OptionBox
-        description="delay (ms) [default: 0ms]"
+        description="Delay (ms) [default: 0ms]"
         name="delay"
         min={0}
         max={3000}
@@ -110,7 +111,7 @@ const OptionContainer = ({
       />
 
       <OptionBox
-        description="duration (ms) [default: 500ms]"
+        description="Duration (ms) [default: 500ms]"
         name="duration"
         min={0}
         max={3000}
@@ -179,7 +180,7 @@ const OptionContainer = ({
           )}
         </>
       )}
-    </div>
+    </OptionContainerWrapper>
   );
 };
 
