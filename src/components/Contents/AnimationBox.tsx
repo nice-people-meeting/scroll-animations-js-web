@@ -41,13 +41,17 @@ function AnimationBox({ name, delay, duration, fadeDistance, scale }: AnimationB
               sa-delay={delay}
               sa-duration={duration}
               sa-fade-distance={fadeDistance.value}
-            />
+            >
+              <span>It will immediately animate</span>
+            </div>
             <div
               className={name || undefined}
               sa-delay={delay}
               sa-duration={duration}
               sa-fade-distance={fadeDistance.value}
-            />
+            >
+              <span>It will immediately animate</span>
+            </div>
             <div
               className={name || undefined}
               sa-delay={delay}
@@ -73,7 +77,7 @@ function AnimationBox({ name, delay, duration, fadeDistance, scale }: AnimationB
               <span>It will immediately animate</span>
             </div>
             <div className={name || undefined} sa-delay={delay} sa-duration={duration} sa-scale={scale.value}>
-              It will immediately animate
+              <span>It will immediately animate</span>
             </div>
             <div className={name || undefined} sa-delay={delay} sa-duration={duration} sa-scale={scale.value} />
             <div className={name || undefined} sa-delay={delay} sa-duration={duration} sa-scale={scale.value} />
