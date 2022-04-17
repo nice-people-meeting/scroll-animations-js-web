@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 import init from 'scroll-animations-js';
-import { FadeDistance, Scale } from './Contents';
 import { AnimationBoxWrapper, AnimationBackground } from './styled';
+import type { FadeDistance, Scale } from './Contents';
 
 interface AnimationBoxProps {
   name: string | null;
@@ -69,8 +69,12 @@ function AnimationBox({ name, delay, duration, fadeDistance, scale }: AnimationB
           </>
         ) : (
           <>
-            <div className={name || undefined} sa-delay={delay} sa-duration={duration} sa-scale={scale.value} />
-            <div className={name || undefined} sa-delay={delay} sa-duration={duration} sa-scale={scale.value} />
+            <div className={name || undefined} sa-delay={delay} sa-duration={duration} sa-scale={scale.value}>
+              <span>It will immediately animate</span>
+            </div>
+            <div className={name || undefined} sa-delay={delay} sa-duration={duration} sa-scale={scale.value}>
+              It will immediately animate
+            </div>
             <div className={name || undefined} sa-delay={delay} sa-duration={duration} sa-scale={scale.value} />
             <div className={name || undefined} sa-delay={delay} sa-duration={duration} sa-scale={scale.value} />
             <div className={name || undefined} sa-delay={delay} sa-duration={duration} sa-scale={scale.value} />
