@@ -31,16 +31,16 @@ const Contents = ({ name }: ContentsProps) => {
   const [delay, setDelay] = useState(300);
   const [duration, setDuration] = useState(500);
   const [fadeDistance, setFadeDistance] = useState<FadeDistance>({ isCustom: false, value: 200 });
-  const [scale, setScale] = useState<Scale>({ isCustom: false, value: 200 });
-  const [scaleX, setScaleX] = useState<ScaleX>({ isCustom: false, value: 200 });
-  const [scaleY, setScaleY] = useState<ScaleY>({ isCustom: false, value: 200 });
-  const CODE = `<div class="${name}" ${delay ? `sa-delay="${delay}"` : ''} ${
-    duration !== 500 ? `sa-duration="${duration}"` : ''
-  } ${fadeDistance.isCustom ? `sa-fade-distance="${fadeDistance.value}"` : ''}  ${
-    fadeDistance.isCustom ? `sa-scale="${scale.value}"` : ''
-  }  ${fadeDistance.isCustom ? `sa-scale-x="${scaleX.value}"` : ''}  ${
-    fadeDistance.isCustom ? `sa-scale-y="${scaleY.value}"` : ''
-  } ></div>`;
+  const [scale, setScale] = useState<Scale>({ isCustom: false, value: 1.1 });
+  const [scaleX, setScaleX] = useState<ScaleX>({ isCustom: false, value: 1.1 });
+  const [scaleY, setScaleY] = useState<ScaleY>({ isCustom: false, value: 1.1 });
+  const CODE = `<div class="${name}" ${delay ? `sa-delay="${delay}"` : ''}${
+    duration !== 500 ? ` sa-duration="${duration}"` : ''
+  }${fadeDistance.isCustom ? ` sa-fade-distance="${fadeDistance.value}"` : ''}${
+    scale.isCustom ? ` sa-scale="${scale.value}"` : ''
+  }${scaleX.isCustom ? ` sa-scale-x="${scaleX.value}"` : ''}${
+    scaleY.isCustom ? ` sa-scale-y="${scaleY.value}"` : ''
+  }></div>`;
 
   const delayHandler = (param: number) => {
     setDelay(param);
@@ -70,6 +70,7 @@ const Contents = ({ name }: ContentsProps) => {
         <SubTitle>Usage</SubTitle>
         <CodeBox code={CODE} />
         <OptionContainer
+          name={name}
           delayHandler={delayHandler}
           durationHandler={durationHandler}
           duration={duration}
@@ -86,7 +87,7 @@ const Contents = ({ name }: ContentsProps) => {
       </Content>
       <Content>
         <SubTitle>Preview</SubTitle>
-        <AnimationBox name={name} delay={delay} duration={duration} />
+        <AnimationBox name={name} delay={delay} duration={duration} fadeDistance={fadeDistance} scale={scale} />
       </Content>
     </ContentsWrapper>
   );
