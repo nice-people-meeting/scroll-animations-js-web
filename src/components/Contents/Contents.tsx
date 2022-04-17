@@ -6,7 +6,7 @@ import CodeBox from './CodeBox';
 import { ContentsWrapper, SubTitle, Content } from './styled';
 
 interface ContentsProps {
-  name: string;
+  name: string | null;
 }
 
 const Contents = ({ name }: ContentsProps) => {

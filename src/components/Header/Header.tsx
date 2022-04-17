@@ -17,7 +17,7 @@ export default function Header({ curAnimationHandler }: Prop) {
         </ToNpmDiv>
       </ToNpmContainer>
       <LogoContainer>
-        <img src="images/large.png" alt="logo" width="700px" />
+        <img src="images/large.png" alt="logo" width="300px" />
       </LogoContainer>
       <ButtonWrapper>
         {AnimationList.map(el => {

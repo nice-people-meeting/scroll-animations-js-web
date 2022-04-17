@@ -1,14 +1,14 @@
-import { TestAniamtionDiv, AnimationBoxWrapper, AnimationBackground } from './styled';
+import { AnimationBoxWrapper, AnimationBackground } from './styled';
 
 interface AnimationBoxProps {
-  name: string;
+  name: string | null;
 }
 
 function AnimationBox({ name }: AnimationBoxProps) {
   return (
     <AnimationBoxWrapper>
       <AnimationBackground>
-        <div className={name} />
+        <div className={name || undefined} />
       </AnimationBackground>
     </AnimationBoxWrapper>
   );
