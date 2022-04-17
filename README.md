@@ -128,7 +128,7 @@ Vue.use(Animation, {
 
 <span style="color:grey;">nuxt.config.js</span>
 
-```json
+```js
     ...
   plugins: [
     { src: '~/plugins/scroll-animation', ssr: false },
