@@ -20,6 +20,10 @@ function AnimationBox({ name, delay, duration, fadeDistance, scale }: AnimationB
     scrollToTop();
   }, [name]);
 
+  useEffect(() => {
+    scrollRef.current?.scrollIntoView(false);
+  }, []);
+
   const scrollToTop = useCallback(() => {
     scrollRef.current?.scrollIntoView({ block: 'start' });
   }, [name]);
